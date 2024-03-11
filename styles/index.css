@@ -23,6 +23,7 @@ main h1 {
   -o-border-radius: 10px;
   overflow: hidden;
   box-shadow: 1px 2px 3px #1c1c1c;
+  padding-bottom: 30px;
 }
 
 .card img {
@@ -37,14 +38,14 @@ main h1 {
   font-size: 32px;
 }
 
-.card a {
+button {
+  border: none;
   background-color: #ff9500;
   text-decoration: none;
   border: none;
   font-size: 20px;
   color: #f7f7f7;
   padding: 10px 20px;
-  margin-bottom: 30px;
   border-radius: 8px;
   -webkit-border-radius: 8px;
   -moz-border-radius: 8px;
@@ -52,7 +53,8 @@ main h1 {
   -o-border-radius: 8px;
 }
 
-.card a:hover {
+button:hover {
   background-color: #343434;
   color: #ff9500;
+  cursor: pointer;
 }
