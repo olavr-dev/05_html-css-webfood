@@ -1,3 +1,8 @@
+main {
+  width: 80%;
+  margin: 0 auto;
+}
+
 main h1 {
   text-align: center;
   font-size: 52px;
@@ -5,10 +10,32 @@ main h1 {
   margin: 50px 0 100px 0;
 }
 
+button {
+  border: none;
+  background-color: #ff9500;
+  text-decoration: none;
+  border: none;
+  font-size: 20px;
+  color: #343434;
+  padding: 10px 20px;
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+}
+
+button:hover {
+  background-color: #343434;
+  color: #ff9500;
+  cursor: pointer;
+}
+
 .item-cards {
-  display: flex;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   gap: 50px;
+  justify-items: center;
 }
 
 .card {
@@ -16,6 +43,7 @@ main h1 {
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 400px;
   border-radius: 10px;
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
@@ -36,25 +64,4 @@ main h1 {
   color: #343434;
   margin: 10px 0 20px 0;
   font-size: 32px;
-}
-
-button {
-  border: none;
-  background-color: #ff9500;
-  text-decoration: none;
-  border: none;
-  font-size: 20px;
-  color: #f7f7f7;
-  padding: 10px 20px;
-  border-radius: 8px;
-  -webkit-border-radius: 8px;
-  -moz-border-radius: 8px;
-  -ms-border-radius: 8px;
-  -o-border-radius: 8px;
-}
-
-button:hover {
-  background-color: #343434;
-  color: #ff9500;
-  cursor: pointer;
 }
