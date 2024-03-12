@@ -24,7 +24,7 @@ nav ul {
 nav li a {
   text-decoration: none;
   color: #ff9500;
-  font-size: 22px;
+  font-size: 1.5rem;
 }
 
 nav li a:hover {
@@ -42,7 +42,7 @@ nav li a:hover {
 
 #logo {
   text-transform: uppercase;
-  font-size: 38px;
+  font-size: 2.5rem;
   font-weight: 700;
 }
 
