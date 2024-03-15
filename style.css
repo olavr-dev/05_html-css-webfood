@@ -1,5 +1,11 @@
 /* <----------------------------------------> */
-/* <--********** CSS Reset ***************--> */
+/* <--********** CSS Imports *************--> */
+/* <----------------------------------------> */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&family=Truculenta:opsz,wght@12..72,100..900&display=swap');
+
+/* <----------------------------------------> */
+/* <--********** CSS Resets **************--> */
 /* <----------------------------------------> */
 
 * {
@@ -14,7 +20,7 @@
 
 body {
   background-color: rgb(52, 52, 52);
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Truculenta', 'Poppins', sans-serif;
   color: rgb(255, 149, 0);
   transition: all 300ms ease;
   -webkit-transition: all 300ms ease;
@@ -27,8 +33,17 @@ body {
 /* <--********** Header Styling **********--> */
 /* <----------------------------------------> */
 
-nav ul {
+header {
   display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 5.5rem;
+  padding: 0 5%;
+  background-color: rgb(34, 34, 34);
+}
+
+nav ul {
+  display: none;
   gap: 2rem;
   list-style: none;
 }
@@ -58,7 +73,7 @@ nav li a:hover {
 
 #side-drawer header {
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
   align-items: center;
   height: 5.5rem;
   padding: 0 5%;
@@ -80,32 +95,27 @@ nav li a:hover {
   text-align: center;
 }
 
-#desktop-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 5.5rem;
-  padding: 0 5%;
-  background-color: rgb(34, 34, 34);
+#side-drawer ul li a {
+  font-size: 3rem;
 }
 
-#logo {
+.logo {
   font-size: 2.5rem;
   font-weight: 700;
   text-transform: uppercase;
 }
 
-#logo a {
+.logo a {
   color: rgb(255, 149, 0);
   text-decoration: none;
 }
 
-#logo a:hover {
+.logo a:hover {
   color: rgb(247, 247, 247);
 }
 
 .menu-button {
-  display: none;
+  display: flex;
   flex-direction: column;
   justify-content: space-around;
   width: 3rem;
@@ -123,13 +133,13 @@ nav li a:hover {
 /* <----------------------------------------> */
 
 main {
-  width: 80%;
-  max-width: 1200px;
+  width: 100%;
   margin: 0 auto;
+  padding-bottom: 5rem;
 }
 
 main h1 {
-  margin: 3rem 0 6rem 0;
+  margin: 2rem 0.5rem;
   font-size: 3rem;
   font-weight: 500;
   text-align: center;
@@ -145,7 +155,9 @@ button {
   -o-border-radius: 8px;
   background-color: rgb(255, 149, 0);
   text-decoration: none;
+  font-family: 'Poppins', sans-serif;
   font-size: 1.25rem;
+  font-weight: 500;
   color: rgb(52, 52, 52);
 }
 
@@ -157,7 +169,7 @@ button:hover {
 
 .item-cards {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   justify-items: center;
   gap: 2rem;
   margin: 0 3rem;
@@ -195,113 +207,52 @@ button:hover {
 /* <--********** Media Queries ***********--> */
 /* <----------------------------------------> */
 
-/* <-- Small Mobile Devices --> */
-@media only screen and (min-width: 320px) and (max-width: 359px) {
-  #logo {
-    font-size: 2rem;
-  }
-  #desktop-header nav ul {
-    display: none;
-  }
-  #side-drawer a {
-    font-size: 2rem;
-  }
-  .menu-button {
+/* <-- iPads and Tablets 768px --> */
+@media only screen and (min-width: 48rem) {
+  /* <-- Header --> */
+  nav ul {
     display: flex;
   }
-  main {
-    width: 100%;
-  }
-  main h1 {
-    margin: 2rem 0;
-    font-size: 2rem;
-  }
-
-  .item-cards {
-    grid-template-columns: 1fr;
-    margin-bottom: 2rem;
-  }
-  .card h2 {
-    margin: 0.75rem 0 1rem 0;
-    font-size: 1.5rem;
-    color: rgb(52, 52, 52);
-  }
-}
-
-/* <-- Mobile Phones --> */
-@media only screen and (min-width: 360px) and (max-width: 767px) {
-  #logo {
-    font-size: 2rem;
-  }
-  #desktop-header nav ul {
+  .menu-button {
     display: none;
   }
-  #side-drawer a {
-    font-size: 2.5rem;
+  nav li a {
+    font-size: 1.75rem;
   }
-  .menu-button {
-    display: flex;
-  }
-  main {
-    width: 100%;
+  /* <-- Main --> */
+  .item-cards {
+    grid-template-columns: 1fr 1fr;
   }
   main h1 {
-    margin: 2rem 0;
-    font-size: 2rem;
-  }
-
-  .item-cards {
-    grid-template-columns: 1fr;
-    margin-bottom: 2rem;
+    margin: 4rem 0;
+    font-size: 4rem;
   }
   .card h2 {
-    margin: 0.75rem 0 1rem 0;
-    font-size: 1.8rem;
+    margin: 2rem 0;
+    font-size: 3rem;
     color: rgb(52, 52, 52);
   }
-}
-
-/* <-- Tablets --> */
-@media only screen and (min-width: 768px) and (max-width: 1023px) {
-  #desktop-header nav li a {
+  button {
+    padding: 0.75rem 1.5rem;
     font-size: 1.3rem;
   }
-  #side-drawer {
-    display: none;
-  }
+}
+
+/* <-- Small Monitors 1024px --> */
+@media only screen and (min-width: 64rem) {
   main {
-    width: 100%;
-  }
-  main h1 {
-    margin: 3rem 0;
-    font-size: 2.5rem;
+    max-width: 64rem;
   }
 }
 
-/* <-- Small Monitors --> */
-@media only screen and (min-width: 1024px) and (max-width: 1365px) {
-  #side-drawer {
-    display: none;
-  }
+/* <-- Laptops 1366px--> */
+@media only screen and (min-width: 85.375rem) {
 }
 
-/* <-- Laptops --> */
-@media only screen and (min-width: 1366px) and (max-width: 1919px) {
-  #side-drawer {
-    display: none;
-  }
+/* <-- Desktop Monitors 1920px Full HD --> */
+@media only screen and (min-width: 120rem) {
 }
 
-/* <-- Desktop Monitors --> */
-@media only screen and (min-width: 1920px) and (max-width: 2559px) {
-  #side-drawer {
-    display: none;
-  }
-}
-
-/* <-- TVs and Large Monitors --> */
-@media only screen and (min-width: 2560px) {
-  #side-drawer {
-    display: none;
-  }
+/* <-- TVs and Large Desktop Monitors 2560px QuadHD+ --> */
+@media only screen and (min-width: 160rem) {
 }
