@@ -43,6 +43,29 @@ nav li a:hover {
   color: #f7f7f7;
 }
 
+#side-drawer nav {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.93);
+  position: fixed;
+}
+
+#side-drawer nav ul {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50%;
+}
+
+#side-drawer nav ul li {
+  border-bottom: 2px solid #ff9500;
+  padding-bottom: 2rem;
+  margin-bottom: 2rem;
+  width: 100%;
+  text-align: center;
+}
+
 #desktop-header {
   display: flex;
   justify-content: space-between;
@@ -163,8 +186,11 @@ button:hover {
   #logo {
     font-size: 2rem;
   }
-  nav ul {
+  #desktop-header nav ul {
     display: none;
+  }
+  #side-drawer a {
+    font-size: 2rem;
   }
   .menu-button {
     display: flex;
@@ -193,8 +219,11 @@ button:hover {
   #logo {
     font-size: 2rem;
   }
-  nav ul {
+  #desktop-header nav ul {
     display: none;
+  }
+  #side-drawer a {
+    font-size: 2.5rem;
   }
   .menu-button {
     display: flex;
@@ -220,10 +249,10 @@ button:hover {
 
 /* <-- Tablets --> */
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
-  nav li a {
+  #desktop-header nav li a {
     font-size: 1.3rem;
   }
-  aside {
+  #side-drawer {
     display: none;
   }
   main {
@@ -237,28 +266,28 @@ button:hover {
 
 /* <-- Small Monitors --> */
 @media only screen and (min-width: 1024px) and (max-width: 1365px) {
-  aside {
+  #side-drawer {
     display: none;
   }
 }
 
 /* <-- Laptops --> */
 @media only screen and (min-width: 1366px) and (max-width: 1919px) {
-  aside {
+  #side-drawer {
     display: none;
   }
 }
 
 /* <-- Desktop Monitors --> */
 @media only screen and (min-width: 1920px) and (max-width: 2559px) {
-  aside {
+  #side-drawer {
     display: none;
   }
 }
 
 /* <-- TVs and Large Monitors --> */
 @media only screen and (min-width: 2560px) {
-  aside {
+  #side-drawer {
     display: none;
   }
 }
